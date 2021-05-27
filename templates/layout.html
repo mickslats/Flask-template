@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <title>YOUR WEBSITE TITLE GOES HERE</title>
+      <meta charset="utf-8">
+      <link rel="stylesheet" href="{{url_for('static',filename='css/main.css')}}">
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <h1 class="logo">YOUR LOGO GOES HERE</h1>
+        <strong><nav>
+          <ul class="menu">
+            <li><a href="{{ url_for('home') }}">Home</a></li>
+            <li><a href="{{ url_for('about') }}">About</a></li>
+            <!-- If you want to add another page it goes here (Rember to add the css class for it and to def in the python file)-->
+          </ul>
+        </nav></strong>
+      </div>
+    </header>
+    <div class="container">
+        {%block content%}
+        {%endblock%}
+    </div>
+  </body>
+</html>
